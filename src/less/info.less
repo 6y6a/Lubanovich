@@ -1,13 +1,53 @@
 .info {
-  &:extend(.conteiner);
   padding-top: 20px;
   padding-bottom: 26px;
   background-color: @color-bg-info;
-  border-top: 1px solid @color-border-info;
+  border-top: 1px solid  #dcdcdc;
 }
 
 .logo {
   width: 7.631578%;
   float: left;
-
 }
+
+.contact-data {
+  float: left;
+  margin-left: 17px;
+  width: 14.529914%;
+  .text-center;
+
+  &__tel {
+    font: 18px @font-family-tel;
+    color: #231f20;
+  }
+
+  &__info {
+    font: 12px @font-family-info;
+    color: #737678;
+  }
+
+  &__mail {
+    margin-top: 8px;
+    font: 14px @font-family-tel;
+    a {
+      color: #e6472e;
+    }
+  }
+
+  &__time {
+    margin-top: 10px;
+    font: 16px @font-family-info;
+    color: #231f20;
+  }
+}
+
+.contact {
+  float: right;
+  //margin-left: 17px;
+  width: 14.529914%;
+
+  &__btn {
+    margin-bottom: 15px;
+  }
+}
+
