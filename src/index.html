@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="./css/main.css">
 
     <script src="js/libs.min.js"></script>
+    <script src="js/transition.js"></script>
+    <script src="js/carousel.js"></script>
     <script src="js/main.js"></script>
+
 </head>
 <body>
 <header>
@@ -37,7 +40,37 @@
          --><div class="social-link__item"><a href="#" class="social-struct"></a></div>
         </div>
     </div>
-    <div class="block1"></div>
+    <div class="info">
+        <div class="container">
+            <div class="logo">
+                <img src="./img/logo.png" alt="logo" class="img-responsive">
+            </div>
+            <div class="slider"></div>
+            <div class="contact-data">
+                <div class="tel"></div>
+                <div class="contact"></div>
+            </div>
+            <div id="carousel-menu" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="./img/calendar.jpg" alt="calendar">
+                    </div>
+                    <div class="item">
+                        <img src="./img/print.jpg" alt="print">
+                    </div>
+
+                </div>
+
+                <a class="left carousel-control" href="#carousel-menu" role="button" data-slide="prev">
+                    <span class="arrow-left" aria-hidden="true"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-menu" role="button" data-slide="next">
+                    <span class="arrow-right" aria-hidden="true"></span>
+                </a>
+            </div>
+
+        </div>
+    </div>
 </header>
 
 </body>
