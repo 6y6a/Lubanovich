@@ -1,0 +1,48 @@
+.basic-stn {
+  border-top: 1px solid #dcdcdc;
+}
+
+.product {
+  float: left;
+  width: 65.811965%;
+  margin: 50px 0;
+
+  &__header {
+    margin-bottom: 30px;
+    padding-left: 35px;
+    font: 18px "HelveticaNeueBold", sans-serif;
+    color: #231f20;
+    .text-uppercase;
+  }
+}
+
+.prd-link {
+  float: left;
+  width: 20%;
+  .text-center;
+
+  &__pic {
+    &:extend(.img-responsive);
+    margin-bottom: 15px;
+    height: 100px;
+  }
+
+  &__cap {
+    margin-bottom: 50px;
+    font: 16px "HelveticaNeueRoman", sans-serif;
+    color: #231f20;
+  }
+
+  &:hover {
+    .prd-link__cap {
+      color: #e6472e;
+    }
+    .catalog {
+      background-position: -0px -0px;
+    }
+  }
+}
+
+.catalog:hover {
+  background-position: -0px -0px;
+}
