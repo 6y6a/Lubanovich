@@ -3,9 +3,10 @@
 }
 
 .product {
+  &:extend(.clearfix all);
   float: left;
   width: 65.811965%;
-  margin: 50px 0;
+  padding-top: 50px;
 
   &__header {
     margin-bottom: 30px;
@@ -17,9 +18,12 @@
 }
 
 .prd-link {
+  &:extend(.clearfix all);
+  display: block;
   float: left;
   width: 20%;
   .text-center;
+  .text-noline;
 
   &__pic {
     &:extend(.img-responsive);
@@ -28,7 +32,7 @@
   }
 
   &__cap {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
     font: 16px "HelveticaNeueRoman", sans-serif;
     color: #231f20;
   }
@@ -38,11 +42,242 @@
       color: #e6472e;
     }
     .catalog {
+      background-position: -345px -100px;
+    }
+    .bloks {
       background-position: -0px -0px;
+    }
+    .book {
+      background-position: -230px -0px;
+    }
+    .booklet {
+      background-position: -460px -0px;
+    }
+    .calendar {
+      background-position: -115px -100px;
+    }
+    .datebook {
+      background-position: -0px -200px;
+    }
+    .folder {
+      background-position: -230px -200px;
+    }
+    .guide {
+      background-position: -460px -200px;
+    }
+    .magazine {
+      background-position: -115px -300px;
+    }
+    .map {
+      background-position: -345px -300px;
+    }
+    .inews {
+      background-position: -0px -400px;
+    }
+    .packege {
+      background-position: -230px -400px;
+    }
+    .pamphlet {
+      background-position: -460px -400px;
+    }
+    .poster {
+      background-position: -115px -500px;
+    }
+    .wraper {
+      background-position: -345px -500px;
     }
   }
 }
 
-.catalog:hover {
-  background-position: -0px -0px;
+.news {
+  &:extend(.clearfix all);
+  float: left;
+  width: 31.623931%;
+  padding-top: 50px;
+  margin-bottom: 50px;
+  background-color: #fafafa;
+
+  &__wrapper {
+    &:extend(.clearfix all);
+    width: 100%;
+  }
+
+  &__header {
+    float: left;
+    width: 45.945945%;
+    margin-bottom: 30px;
+    padding-left: 35px;
+    font: 18px "HelveticaNeueBold", sans-serif;
+    color: #231f20;
+    .text-uppercase;
+  }
+
+  &__link {
+    float: left;
+    width: 54.054054%;
+    padding-right: 30px;
+    font: 13px "HelveticaNeueRoman", sans-serif;
+    color: #838789;
+    .text-right;
+    .text-uppercase;
+  }
+}
+
+.news-block {
+  &:extend(.clearfix all);
+  margin-bottom: 26px;
+
+  &__pic {
+    float: left;
+    width: 45.945945%;
+    padding-left: 20px;
+    img {
+      float: right;
+    }
+  }
+
+  &__article {
+    float: left;
+    width: 54.054054%;
+    padding-left: 13px;
+    padding-right: 20px;
+  }
+}
+
+.article {
+
+  &__date {
+    padding-top: 2px;
+    font: 12px "HelveticaNeueRoman", sans-serif;
+    color: #737678;
+  }
+
+  &__header {
+    padding: 7px 0;
+    font: 16px "HelveticaNeueBold", sans-serif;
+    color: #231f20;
+    .text-uppercase;
+  }
+
+  &__new {
+    max-height: 95px;
+    overflow: hidden;
+    text-overflow: clip;
+    font: 13px "HelveticaNeueRoman", sans-serif;
+    color: #454545;
+    margin-bottom: 8px;
+  }
+
+  &__link {
+    font: 13px "HelveticaNeueItalic", sans-sefir;
+    color: #737678;
+  }
+}
+
+// Medium screen
+@media screen and (max-width: @screen-md-max) {
+  .product__header {
+    padding-left: 20px;
+  }
+
+  .news__header {
+    padding-left: 20px;
+  }
+}
+
+// Small screen / tablet
+@media screen and (max-width: @screen-sm-max) {
+  .product {
+    width: 100%;
+  }
+  .news {
+    width: 100%;
+
+    &__header {
+      width: 34%;
+      padding-left: 50px;
+    }
+
+    &__link {
+      .text-left;
+    }
+  }
+
+  .news-block__pic {
+    width: 24.479166%;
+    img {
+      float: right;
+    }
+  }
+
+  .news-block__article {
+    width: 70.78125%;
+  }
+}
+
+// Extra small screen
+@media screen and (max-width: @screen-xs-max) {
+  .prd-link {
+    width: 33.3333%;
+  }
+  .news {
+    margin-bottom: 0;
+
+    &__header {
+      width: 50%;
+      padding-left: 5px;
+    }
+
+    &__link {
+      width: 50%;
+      padding-right: 5px;
+      .text-right;
+    }
+  }
+
+  .news-block {
+    &__pic {
+      width: 30%;
+      padding-left: 0;
+      .text-center;
+    }
+
+    &__article {
+      width: 70%;
+    }
+  }
+}
+
+// Phone
+@media screen and (max-width: @screen-xs-min) {
+  .product {
+    padding-top: 14px;
+    padding-bottom: 25px;
+    .text-center;
+
+    &__header {
+      padding-left: 0;
+    }
+  }
+  .prd-link {
+    width: 50%;
+
+    &__cap {
+      margin-bottom: 25px;
+    }
+  }
+
+}
+
+
+
+
+.mywidth {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: blue;
+  color: white;
+  width: 50px;
+  heigth: 20px;
 }
