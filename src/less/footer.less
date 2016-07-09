@@ -184,8 +184,25 @@
   }
 }
 
-.copyrigth {
-  height: 20px;
+.copyright {
+  &:extend(.container all);
+  padding: 13px 0;
+  font: 10pt "HelveticaNeueRoman", sans-serif;
+  color: #838789;
+
+  &__sign,
+  &__develop {
+    float: left;
+    width: 60%;
+    a { color: #838789;}
+    //font: 12pt "HelveticaNeueRoman", sans-serif;
+  }
+
+  &__develop {
+    width: 40%;
+    .text-right;
+  }
+
 }
 
 // Small screen / tablet
@@ -228,6 +245,11 @@
     width: 50.534351%;
     margin-left: 15.625%;
     padding: 32px 40px 0;
+  }
+
+  .copyright {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -272,5 +294,20 @@
     margin-left: 0;
     padding: 5px 10% 0;
     max-width: 450px;
+  }
+
+  .copyright {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &__sign,
+    &__develop {
+      width: 100%;
+      .text-center;
+    }
+
+    &__develop {
+      padding-top: 7px;
+    }
   }
 }
