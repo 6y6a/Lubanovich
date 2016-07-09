@@ -1,5 +1,4 @@
 $(document).ready( function(){
-    $('title').text("Hello");
 
     //== News block modification
     var toggleNewsOnce = $(document).outerWidth() > 973;
@@ -29,7 +28,7 @@ $(document).ready( function(){
         }
     }
 
-    // Move news into new container in .basic-stn
+    // Move .news into .basic-stn
     function moveNewsOut() {
         $('.news').appendTo($('.basic-stn'))
             .wrapInner('<div class="container"></div>');
@@ -37,16 +36,11 @@ $(document).ready( function(){
 
     // Move news into container of .product
     function moveNewsIn() {
-        $('.news').find('.container')
+        $('.news')
+            .find('.container')
             .children()
             .unwrap()
             .parent()
             .appendTo($('.basic-stn>.container'));
     }
-
-
-    $(window).resize(function() {
-        $('.mywidth').text($(window).width());
-    });
-
 });

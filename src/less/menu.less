@@ -135,15 +135,13 @@
 
 .menu-basic {
   &:extend(.container);
-  //display: inline-block;
-  //margin-left: auto;
-  //margin-right: auto;
   .text-center;
+  padding-top: 18px;
 
   &__item {
-    position: relative;;
+    position: relative;
     display: inline-block;
-    padding: 18px 23px;
+    padding: 0 23px 18px;
     font: 16px @font-family-menu-basic;
     cursor: pointer;
 
@@ -155,23 +153,52 @@
     &:after {
       position: absolute;
       content: '|';
-      top: 18px;
-      right: 0;
+      top: 0;
+      right: -1px;
       font: 16px "HelveticaNeueRoman";
       color: #dcdcdc;
+    }
 
+    &:last-of-type:after {
+      display: none;
+    }
+
+    &:hover a {
+      color: #f00;
     }
   }
 }
 
+.nav-down {
+  background-color: #f9a41a;
+}
 
+.menu-footer {
+  &:extend(.menu-basic all);
+
+  &__item {
+    font-size: 14px;
+    a {
+      color: #000;
+    }
+
+    &:after {
+      font-size: 14px;
+      color: #000;
+    }
+  }
+}
+
+// Medium screen
 @media (max-width: @screen-md-max) {
   .search {
     margin-left: 0;
   }
 }
 
+// Extra small screen
 @media (max-width: @screen-sm-max) {
+
   .menu-nav__item:last-of-type {
     display: none;
   }
@@ -183,9 +210,19 @@
   }
 }
 
+// Phone
 @media (max-width: @screen-xs-min) {
+
   .menu-nav {
     display: none;
   }
+
+  .nav-down {
+    padding: 0 20px;
+  }
+}
+
+.problem {
+  &:extend(.clearfix all);
 }
 
