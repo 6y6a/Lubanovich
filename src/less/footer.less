@@ -1,0 +1,101 @@
+.footer {
+  padding-top: 40px;
+  padding-bottom: 25px;
+}
+
+.footer-contact {
+  width: 37.179487%;
+  float: left;
+  padding: 15px 40px 0;
+  border-right: 1px solid #d3d3d3;
+
+  &__header {
+    margin-bottom: 25px;
+    font: 18px "HelveticaNeueBold", sans-serif;
+  }
+
+  &__tel {
+    padding-top: 15px;
+  }
+
+  &__mail {
+    padding-top: 15px;
+  }
+
+}
+
+.about {
+  font: 12px "HelveticaNeueRoman", sans-serif;
+  color: #757575;
+}
+
+.tel {
+  float: left;
+  width: 50%;
+
+  &__number,
+  &__skype{
+    position: relative;
+    padding-left: 25px;
+    padding-bottom: 8px;
+    font: 14px "HelveticaNeueRoman", sans-serif;
+    .text-uppercase;
+
+    &:before {
+      position: absolute;
+      top: -1px;
+      left: 0;
+      content: '';
+      .sm-icon-tel;
+    }
+  }
+
+  &__about {
+    padding-left: 25px;
+    line-height: 1.5;
+  }
+
+  &__skype {
+    margin-top: 10px;
+    text-transform: none;
+
+    &:before {
+      .sm-icon-skype;
+    }
+  }
+
+}
+
+.mail {
+  float: left;
+  width: 50%;
+
+  &__adress {
+    position: relative;
+    padding-left: 25px;
+    //padding-bottom: 8px;
+    font: 14px "HelveticaNeueRoman", sans-serif;
+
+    a {
+      color: #000;
+    }
+
+    &:hover a{
+      color: red;
+    }
+
+    &:before {
+      position: absolute;
+      top: -1px;
+      left: 0;
+      content: '';
+      .sm-icon-mail;
+    }
+  }
+
+  &__about {
+    padding-left: 25px;
+    padding-bottom: 10px;
+    line-height: 1.5;
+  }
+}
