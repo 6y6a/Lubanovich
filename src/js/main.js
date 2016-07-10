@@ -44,20 +44,25 @@ $(document).ready( function(){
             .appendTo($('.basic-stn>.container'));
     }
 
+
+
     //== Search block modification
     changeSearch();
 
+    // Event handlers for .search block
     function changeSearch() {
         var elem = $('.search__text');
         var preventChange;
 
+
+
         elem.mouseenter(function() {
-            toggleSearch($('.loupe'));
+            toggleSearch($('.icon-loupe'));
 
         });
 
         elem.mouseleave(function() {
-            if (!preventChange) { toggleSearch($('.loupe-hover')); }
+            if (!preventChange) { toggleSearch($('.icon-loupe-hover')); }
         });
 
         elem.focus(function() {
@@ -65,18 +70,25 @@ $(document).ready( function(){
         });
 
         elem.blur(function() {
-            toggleSearch($('.loupe-hover'));
+            toggleSearch($('.icon-loupe-hover'));
             preventChange = false;
         });
+
+        $('window').resize(function(){
+            preventChange = $('window').width() < 768;
+        })
+
     }
 
+    // Change .loupe image
     function toggleSearch(elem) {
         elem.fadeOut(100)
             .queue(function(next) {
-                $(this).toggleClass('loupe loupe-hover');
+                $(this).toggleClass('icon-loupe icon-loupe-hover');
                 next();
             })
             .fadeIn(100);
     }
+
 
 });
