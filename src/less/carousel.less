@@ -6,12 +6,9 @@
 // Wrapper for the slide container and indicators
 .carousel {
   position: relative;
-  //.make-md-column(7);
   margin-left: 25px;
   float: left;
   width: 57.264957%;
-  //padding-left: 0;
-  //padding-right: 0;
 }
 
 .carousel-inner {
@@ -122,5 +119,11 @@
 
 }
 
+// Small screen / tablet
+@media screen and (max-width: @screen-md-max) {
+  .carousel {
+    display: none;
+  }
+}
 
 

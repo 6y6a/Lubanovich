@@ -43,4 +43,40 @@ $(document).ready( function(){
             .parent()
             .appendTo($('.basic-stn>.container'));
     }
+
+    //== Search block modification
+    changeSearch();
+
+    function changeSearch() {
+        var elem = $('.search__text');
+        var preventChange;
+
+        elem.mouseenter(function() {
+            toggleSearch($('.loupe'));
+
+        });
+
+        elem.mouseleave(function() {
+            if (!preventChange) { toggleSearch($('.loupe-hover')); }
+        });
+
+        elem.focus(function() {
+            preventChange = true;
+        });
+
+        elem.blur(function() {
+            toggleSearch($('.loupe-hover'));
+            preventChange = false;
+        });
+    }
+
+    function toggleSearch(elem) {
+        elem.fadeOut(100)
+            .queue(function(next) {
+                $(this).toggleClass('loupe loupe-hover');
+                next();
+            })
+            .fadeIn(100);
+    }
+
 });
