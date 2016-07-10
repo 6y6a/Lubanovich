@@ -4,14 +4,277 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
+    <title>Любавич</title>
     <link rel="stylesheet" href="./css/libs.css">
     <link rel="stylesheet" href="./css/main.css">
 
     <script src="js/libs.min.js"></script>
+    <script src="js/transition.js"></script>
+    <script src="js/carousel.js"></script>
     <script src="js/main.js"></script>
+
 </head>
 <body>
+<header>
+    <div class="menu-top">
+        <div class="language">
+            <div class="language__icon"></div>
+            <div class="language__name">English</div>
+        </div>
+        <div class="menu-trigger">Меню <span class="caret"></span></div>
+        <ul class="menu-nav">
+            <li class="menu-nav__item"><a href="#">История типографии</a></li><!--
+         --><li class="menu-nav__item"><a href="#">Оценка качества</a></li><!--
+         --><li class="menu-nav__item"><a href="#">Новости</a></li><!--
+         --><li class="menu-nav__item"><a href="#">Вакансии</a></li><!--
+         --><li class="menu-nav__item"><a href="#">FAQ</a></li>
+        </ul>
+        <form class="search search_xs-view">
+            <input type="text" class="search__text" placeholder="Поиск...">
+            <div class="search__icon">
+                <div class="icon-loupe"></div>
+            </div>
+        </form>
+        <div class="social-link">
+            <div class="social-link__item"><a href="#" class="social-facebook"></a></div><!--
+         --><div class="social-link__item"><a href="#" class="social-vk"></a></div><!--
+         --><div class="social-link__item"><a href="#" class="social-struct"></a></div>
+        </div>
+
+    </div>
+    <div class="hidden-margin"></div>
+    <div class="info">
+        <div class="container">
+            <div class="logo">
+                <img src="./img/logo.png" alt="logo" class="img-responsive">
+            </div>
+            <div id="carousel-menu" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="./img/calendar.jpg" alt="calendar">
+                    </div>
+                    <div class="item">
+                        <img src="./img/print.jpg" alt="print">
+                    </div>
+
+                </div>
+
+                <a class="left carousel-control" href="#carousel-menu" role="button" data-slide="prev">
+                    <span class="arrow-left" aria-hidden="true"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-menu" role="button" data-slide="next">
+                    <span class="arrow-right" aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="contact-data">
+                <div class="contact-data__wrapper">
+                    <div class="contact-data__tel">+7 (812) 603-25-25</div>
+                    <div class="contact-data__tel">+7 (800) 333-96-06</div>
+                    <div class="contact-data__info">(звононите нам бесплатно)</div>
+                </div>
+                <div class="contact-data__wrapper">
+                    <div class="contact-data__mail">
+                        <a href="#">comm@lubavich.spb.ru </a>
+                    </div>
+                    <div class="contact-data__time">с 9:00 до 18:00</div>
+                </div>
+            </div>
+            <div class="contact">
+                <div class="btn contact__btn">Заказать звонок</div>
+                <div class="btn btn_act contact__btn">Сделать запрос в типографию</div>
+            </div>
+        </div>
+    </div>
+    <div class="menu-toggle">
+        <div class="menu-trigger">Продукция <span class="caret"></span></div>
+        <ul class="menu-basic menu-dropdown">
+            <li class="menu-basic__item"><a href="#">Продукция</a></li><!--
+         --><li class="menu-basic__item"><a href="#">Требования к макетам</a></li><!--
+         --><li class="menu-basic__item"><a href="#">Портфолио</a></li><!--
+         --><li class="menu-basic__item"><a href="#">Блок директора</a></li><!--
+         --><li class="menu-basic__item"><a href="#">Статьи</a></li><!--
+         --><li class="menu-basic__item"><a href="#">Контакты</a></li>
+        </ul>
+    </div>
+
+</header>
+<section class="basic-stn">
+    <div class="container">
+        <div class="product">
+            <h4 class="product__header">Продукция типографии</h4>
+
+            <a class="prd-link product__prd-link" href="#">
+                <div class="prd-link__pic catalog"></div>
+                <div class="prd-link__cap">Каталог</div>
+            </a>
+            <a class="prd-link product__prd-link" href="#">
+                <div class="prd-link__pic booklet"></div>
+                <div class="prd-link__cap">Буклет</div>
+            </a>
+            <a class="prd-link product__prd-link" href="#">
+                <div class="prd-link__pic pamphlet"></div>
+                <div class="prd-link__cap">Брошюра</div>
+            </a>
+            <a class="prd-link product__prd-link" href="#">
+                <div class="prd-link__pic book"></div>
+                <div class="prd-link__cap">Книга</div>
+            </a>
+            <a class="prd-link product__prd-link" href="#">
+                <div class="prd-link__pic magazine"></div>
+                <div class="prd-link__cap">Журнал</div>
+            </a>
+            <a class="prd-link product__prd-link" href="#">
+                <div class="prd-link__pic poster"></div>
+                <div class="prd-link__cap">Плакат</div>
+            </a>
+            <a class="prd-link product__prd-link" href="#">
+                <div class="prd-link__pic datebook"></div>
+                <div class="prd-link__cap">Ежедневник</div>
+            </a>
+            <a class="prd-link product__prd-link" href="#">
+                <div class="prd-link__pic folder"></div>
+                <div class="prd-link__cap">Папка</div>
+            </a>
+            <a class="prd-link product__prd-link" href="#">
+                <div class="prd-link__pic calendar"></div>
+                <div class="prd-link__cap">Календарь</div>
+            </a>
+            <a class="prd-link product__prd-link" href="#">
+                <div class="prd-link__pic bloks"></div>
+                <div class="prd-link__cap">Блоки</div>
+            </a>
+            <a class="prd-link product__prd-link" href="#">
+                <div class="prd-link__pic inews"></div>
+                <div class="prd-link__cap">Газета</div>
+            </a>
+            <a class="prd-link product__prd-link" href="#">
+                <div class="prd-link__pic wraper"></div>
+                <div class="prd-link__cap">Упаковка</div>
+            </a>
+            <a class="prd-link product__prd-link" href="#">
+                <div class="prd-link__pic map"></div>
+                <div class="prd-link__cap">Карта</div>
+            </a>
+            <a class="prd-link product__prd-link" href="#">
+                <div class="prd-link__pic packege"></div>
+                <div class="prd-link__cap">Пакеты</div>
+            </a>
+            <a class="prd-link product__prd-link" href="#">
+                <div class="prd-link__pic guide"></div>
+                <div class="prd-link__cap">Путеводитель</div>
+            </a>
+        </div>
+        <div class="news">
+
+            <div class="news__wrapper">
+                <h4 class="news__header">Новости</h4>
+                <a class="news__link" href="#">Все новости</a>
+            </div>
+
+            <div class="news-block">
+                <div class="news-block__pic">
+                    <img src="./img/new1.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="article news-block__article">
+                    <p class="article__date">21.10.2015</p>
+                    <h3 class="article__header">Счастливый час!</h3>
+                    <p class="article__new">Звоните с 10:00 до 11:00 каждый день до 1 декабря 2015 года</p>
+                    <a href="#" class="article__link">Подробнее...</a>
+                </div>
+            </div>
+            <div class="news-block">
+                <div class="news-block__pic">
+                    <img src="./img/new2.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="article news-block__article">
+                    <p class="article__date">19.10.2015</p>
+                    <h3 class="article__header">Итоги розыгрыша</h3>
+                    <p class="article__new">Традиционно в сентябре мы проводили лотерею с розыгрышем подарков – 10
+                        великолепных книг среди всех заказчиков типографии «ЛЮБАВИЧ». </p>
+                    <a href="#" class="article__link">Подробнее...</a>
+                </div>
+            </div>
+            <div class="news-block">
+                <div class="news-block__pic">
+                    <img src="./img/new3.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="article news-block__article">
+                    <p class="article__date">24.07.2015</p>
+                    <h3 class="article__header">Два саниметра имеют значение</h3>
+                    <p class="article__new">Типография «ЛЮБАВИЧ» заключила договор на поставку новой нитко-швейной
+                        машины, которая может шить книги форматом 32*52 см!</p>
+                    <a href="#" class="article__link">Подробнее...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="problem"></div>
+
+<div class="nav-down">
+    <ul class="menu-footer">
+        <li class="menu-footer__item"><a href="#">Цены и оплата</a></li><!--
+     --><li class="menu-footer__item"><a href="#">Доставка</a></li><!--
+     --><li class="menu-footer__item"><a href="#">Оборудование</a></li><!--
+     --><li class="menu-footer__item"><a href="#">Отзывы</a></li><!--
+     --><li class="menu-footer__item"><a href="#">О нас</a></li>
+    </ul>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="logo footer__logo">
+            <img src="./img/logo.png" alt="logo" class="img-responsive">
+        </div>
+        <div class="footer-contact">
+            <h4 class="footer-contact__header">Контакты</h4>
+            <div class="about">г. Санкт-Петербург, ул. Менделеевская, дом 9</div>
+            <div class="tel footer-contact__tel">
+                <div class="tel__number">+7 (812) 603-25-25</div>
+                <div class="tel__number">+7 (800) 333-96-06</div>
+                <div class="about tel__about">(звоните бесплатно)</div>
+                <div class="about tel__about">с 9.00 до 18.00</div>
+                <div class="tel__skype">skype: ВашЛогин</div>
+            </div>
+            <div class="mail footer-contact__mail">
+                <div class="mail__adress"><a href="#">comm@lubavich.spb.ru</a></div>
+                <div class="about mail__about">(коммерческий отдел)</div>
+                <div class="mail__adress"><a href="#">design@lubavich.spb.ru</a></div>
+                <div class="about mail__about">(дизайн-студия)</div>
+            </div>
+
+        </div>
+        <div class="footer-social">
+            <div class="footer-social__wrapper"><h4 class="footer-social__header footer-social__header_top">Мы в соц.
+                сетях:</h4>
+                <div class="footer-social__link footer-social__link_vk"><a href="#">группа Любавич вконтакте</a></div>
+                <div class="footer-social__link footer-social__link_fb"><a href="#">группа Любавич facebook</a></div>
+            </div>
+
+            <div class="footer-social__wrapper"><h4 class="footer-social__header footer-social__header_btm">
+                Поделиться:</h4>
+
+                <div class="footer-social__share"><a href="#" class="md-icon-vk"></a></div>
+                <div class="footer-social__share"><a href="#" class="md-icon-fb"></a></div>
+                <div class="footer-social__share"><a href="#" class="md-icon-tw"></a></div>
+                <div class="footer-social__share"><a href="#" class="md-icon-od"></a></div>
+                <div class="footer-social__share"><a href="#" class="md-icon-ad"></a></div>
+            </div>
+        </div>
+        <div class="footer-posting">
+            <h4 class="footer-posting__header">Подписаться на рассылку:</h4>
+
+            <form action="" class="posting">
+                <input type="email" class="posting__email" placeholder="Введите ваш e-mail">
+                <button class="btn posting__btn">Подписаться</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <p class="copyright__sign">© 2015, Типография «Любавич» - крупнейшая типография СПб </p>
+    <p class="copyright__develop">Создание сайта - <a href="#">веб-студия «Волекс»</a></p>
+</div>
 
 
 </body>

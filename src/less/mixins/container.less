@@ -2,8 +2,14 @@
 .container {
   .container-fixed();
 
+  @media (min-width: 300px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   @media (min-width: @screen-sm-min) {
     width: @container-sm;
+    padding-left: 0;
+    padding-right: 0;
   }
   @media (min-width: @screen-md-min) {
     width: @container-md;
@@ -16,4 +22,8 @@
 // Fluid container
 .container-fluid {
   .container-fixed();
+}
+
+.row {
+  .make-row();
 }
