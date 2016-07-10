@@ -46,8 +46,124 @@
   float: right;
   width: 14.529914%;
 
-  &__btn {
+  &__btn:nth-of-type(1) {
     margin-bottom: 15px;
   }
 }
 
+// Small screen / tablet
+@media screen and (max-width: @screen-md-max) {
+
+  .logo {
+    width: 20.6666667%;
+
+    img {
+      .block-center;
+    }
+  }
+
+  .contact-data {
+    width: 79.20%;
+    margin-left: 0;
+    
+    &__wrapper {
+      float: left;
+      width: 45%;
+    }
+
+    &__tel {
+      font-size: 20px;
+    }
+
+    &__tel:nth-of-type(2) {
+      display: none;
+    }
+
+    &__info {
+      font-size: 14px;
+    }
+
+    &__mail {
+      margin-top: 0;
+    }
+
+    &__time {
+      margin-top: 6px;
+    }
+  }
+
+  .contact {
+    float: left;
+    width: 79.20%;
+
+    &__btn {
+      float: left;
+      width: 28.6195286%;
+      height: 50px;
+      margin: 15px 8.26306913% 0;
+
+      &:nth-of-type(1) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .btn.contact__btn {
+    padding: 8px 18px;
+  }
+
+  .btn:nth-of-type(1).contact__btn {
+
+      padding-top: 16px;
+      padding-bottom: 16px;
+  }
+
+}
+
+
+// Extra small screen / phone
+@media screen and (max-width: @screen-xs-max) {
+  .logo {
+    width: 34.375%;
+  }
+
+  .contact-data {
+    width: 65.625%;
+
+    &__wrapper {
+      width: 100%;
+    }
+
+    &__tel {
+      font-size: 18px;
+    }
+
+    &__info {
+      font-size: 12px;
+    }
+
+    &__mail {
+      margin-top: 18px;
+    }
+
+    &__time {
+      margin-top: 12px;
+    }
+  }
+
+  .contact {
+    width: 100%;
+
+    &__btn {
+      float: none;
+      width: 100%;
+      height: auto;
+      max-width: 300px;
+      margin: 10px auto 0;
+    }
+
+    .btn.contact__btn {
+      padding: 14px 25px;
+    }
+  }
+}
