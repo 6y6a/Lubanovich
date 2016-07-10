@@ -55,10 +55,8 @@ $(document).ready( function(){
         var preventChange;
 
 
-
         elem.mouseenter(function() {
             toggleSearch($('.icon-loupe'));
-
         });
 
         elem.mouseleave(function() {
@@ -74,10 +72,6 @@ $(document).ready( function(){
             preventChange = false;
         });
 
-        $('window').resize(function(){
-            preventChange = $('window').width() < 768;
-        })
-
     }
 
     // Change .loupe image
@@ -90,5 +84,60 @@ $(document).ready( function(){
             .fadeIn(100);
     }
 
+
+    //== Menu block modification
+    var toggleMenuOnce = $(document).outerWidth() > 768;
+
+    if (!toggleMenuOnce) {
+        moveMenuOut();
+    }
+    changeMenu();
+
+    // Event handler on window.resize
+    function changeMenu() {
+        $(window).resize(function() {
+            toggleMenu();
+        });
+    }
+
+    // Toggle news when change medium size
+    function toggleMenu() {
+
+        if ($(document).outerWidth() <= 746 && toggleMenuOnce) {
+            moveMenuOut();
+            toggleMenuOnce = false;
+        }
+        if ($(document).outerWidth() > 746 && !toggleMenuOnce) {
+            moveMenuIn();
+            toggleMenuOnce = true;
+        }
+    }
+
+    // Move .news into .basic-stn
+    function moveMenuOut() {
+        $('.menu-nav')
+            .addClass('menu-dropdown')
+            .add($('.menu-nav').prev())
+            .prependTo($('.menu-toggle'))
+    }
+
+    // Move news into container of .product
+    function moveMenuIn() {
+        $('.menu-nav')
+            .removeClass('menu-dropdown')
+            .add($('.menu-nav').prev())
+            .insertAfter('.menu-top>.language');
+    }
+
+    $('.menu-trigger').click(function() {
+       $(this).next().slideToggle(400);
+    });
+
+    $(window).resize(function(){
+        if ($(document).outerWidth() > 746) {
+            $('.menu-nav').removeAttr('style');
+            $('.menu-basic').removeAttr('style');
+        }
+    });
 
 });
