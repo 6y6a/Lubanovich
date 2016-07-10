@@ -2,18 +2,22 @@
   padding: 10px 18px;
   width: 100%;
   font: 16px @font-family-btn;
+  background: grey;
   background: linear-gradient(to bottom, @color-btn, darken(@color-btn, 10%));
   color: #fff;
   cursor: pointer;
   .text-center;
 
   &:hover {
+    background: grey;
     background: linear-gradient(to bottom, darken(@color-btn, 10%), darken(@color-btn, 20%));
   }
 
   &_act {
+    background: red;
     background: linear-gradient(to bottom, @color-btn-act, darken(@color-btn-act, 10%));
     &:hover {
+      background: red;
       background: linear-gradient(to bottom, darken(@color-btn-act, 10%), darken(@color-btn-act, 20%));
     }
   }
